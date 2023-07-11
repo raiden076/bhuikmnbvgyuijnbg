@@ -16,6 +16,6 @@ def get_base_doamin(university, department, api_key):
     with dd() as d:
         bs_dm = []
         d_gen = d.text(f"{department} {university}", backend='lite')
-        for r in islice(d_gen, 2):
+        for r in islice(d_gen, 10):
           bs_dm.append(r['href'].split('/')[2])
         return bs_dm
