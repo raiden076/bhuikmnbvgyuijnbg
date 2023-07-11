@@ -1,3 +1,4 @@
 scrapy
 google-api-python-client
 pandas
+duckduckgo_search

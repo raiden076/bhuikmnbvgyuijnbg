@@ -11,7 +11,7 @@ def main():
     for university in universities:
         for department in departments:
             base_domain = get_base_domain(university, department, API_KEY)
-            base_domains.append(base_domain)
+            base_domains.extend(base_domain)
 
     process = CrawlerProcess()
     process.crawl(PdfCrawler, start_urls=base_domains)
